@@ -1,0 +1,22 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+# Настройки CLion
+.idea/
+
+# Папки сборки CMake
+cmake-build-debug/
+cmake-build-release/
+
+# Скомпилированные исполняемые файлы и логи
+*.exe
+*.o
+*.obj
+*.ninja
+.ninja_deps
+.ninja_log
