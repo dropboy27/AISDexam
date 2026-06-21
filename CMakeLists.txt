@@ -3,4 +3,10 @@ project(exzzz C)
 
 set(CMAKE_C_STANDARD 23)
 
-add_executable(exzzz BinaryTree.c)
+add_executable(exzzz Trees/BinaryTree.c
+        Sortings/Shell.c
+        Sortings/Shell.c
+        Sortings/QuickSort.c
+        Sortings/HeapSort.c
+        Sortings/Assertion.c
+        Sortings/Linear.c)
