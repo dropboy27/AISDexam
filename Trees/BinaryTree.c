@@ -110,6 +110,38 @@ void PrintTree(Node *root, int space) {
     PrintTree(root->left, space);
 }
 
+
+// Обход root->left->right
+void PreOrder(Node *root){
+    if (root == NULL){
+        return;
+    }
+    printf("%d ", root->val);
+    PreOrder(root->left);
+    PreOrder(root->right);
+}
+
+// Обход left->root->right
+void InOrder(Node *root){
+    if (root == NULL){
+        return;
+    }
+    InOrder(root->left);
+    printf("%d ", root->val);
+    InOrder(root->right);
+}
+
+// Обход left->right->root
+void PostOrder(Node *root){
+    if (root == NULL){
+        return;
+    }
+    PostOrder(root->left);
+    PostOrder(root->right);
+    printf("%d ", root->val);
+}
+
+
 int main() {
     Node *root = NULL;
 
