@@ -17,3 +17,6 @@ add_executable(exzzz
 add_executable(expression_tree_prog
         Trees/ExpressionTree.c
 )
+add_executable(avl_tree_prog
+        Trees/AVLTree.c
+)
