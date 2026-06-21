@@ -84,7 +84,42 @@ Node* Delete(Node *root, int val){
     return root;
 }
 
+void FreeTree(Node *root){
+    if (root != NULL){
+        FreeTree(root->right);
+        FreeTree(root->left);
+        free(root);
+    }
+}
+
+void PrintTree(Node *root, int space) {
+    if (root == NULL) {
+        return;
+    }
+
+    space += 4;
+
+    PrintTree(root->right, space);
+
+    printf("\n");
+    for (int i = 4; i < space; i++) {
+        printf(" ");
+    }
+    printf("%d\n", root->val);
+
+    PrintTree(root->left, space);
+}
 
 int main() {
+    Node *root = NULL;
 
+    root = InsertNode(root, 4);
+    InsertNode(root, 3);
+    InsertNode(root, 6);
+
+    printf("Структура дерева:\n");
+    PrintTree(root, 0);
+
+    FreeTree(root);
+    return 0;
 }

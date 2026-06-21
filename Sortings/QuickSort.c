@@ -1,4 +1,4 @@
-void swap(int *a, int *b){
+void swap_quick(int *a, int *b){
     int temp = *a;
     *a = *b;
     *b = temp;
@@ -10,10 +10,10 @@ int partition(int* arr, int low, int high){
     for (int j = low; j< high; j++){
         if(arr[j]<pivot){
             i++;
-            swap(&arr[i], &arr[j]);
+            swap_quick(&arr[i], &arr[j]);
         }
     }
-    swap(&arr[i+1], &arr[high]);
+    swap_quick(&arr[i+1], &arr[high]);
     return i+1;
 }
 int quick_sort(int* arr, int low, int high){

@@ -1,4 +1,4 @@
-void swap(int *a, int *b){
+void swap_heap(int *a, int *b){
     int temp = *a;
     *a = *b;
     *b = temp;
@@ -19,7 +19,7 @@ void godown(int *arr, int start, int size){
         if (largest == i){
             break;
         }
-        swap(&arr[i], &arr[largest]);
+        swap_heap(&arr[i], &arr[largest]);
         i = largest;
     }
 }
@@ -29,7 +29,7 @@ void heap_sort(int *arr, int n){
         godown(arr, i, n);
     }
     for (int end = n-1; end >0; end--){
-        swap(&arr[end], &arr[0]);
+        swap_heap(&arr[end], &arr[0]);
         godown(arr, 0 , end);
     }
 }
